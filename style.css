@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar{
+    height: 50px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 20px;
+    background-color: rgb(255, 0, 0);
+}
+
+
+
+::-webkit-scrollbar-button{
+    height: 100px;
+   
+}
+
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav h1{
+    color: white;
+    font-size: 30px;
+}
+
+#pesquisa-qt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw - 20px);
+    height: 100px;
+    z-index: 8;
+    position: relative;
+}
+
+#numeropokemon{
+    width: 20%;
+    height: 35px;
+    border-radius: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+#numeropokemon::placeholder{
+    color: rgb(179, 179, 179);
+}
+
+
+main{
+    width: calc(100% - 240px);
+    height: calc(100vh - 169px);
+    overflow-y: scroll;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 120px 40px 120px;
+    
+}
+
+
+
+#img{
+    width: 110% ;
+    height:  100vh;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+    background-image: url('https://cdn.pixabay.com/photo/2016/08/08/06/46/pokemon-1577763_960_720.jpg');
+    background-size: cover;
+    filter: blur(7px);
+}
+
+.pokem{
+    cursor: pointer;
+    width: 300px;
+    margin: 30px;
+    height: 300px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 99;
+    transition: 0.5s;
+}
+
+.pokem:hover{
+    background: rgba(255, 255, 255, 10);
+}
+
+.pokem h3{
+    margin-bottom: 20px;
+    
+}
+
+.img-poke{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+}
+
+@media screen and (max-width: 750px) {
+    main{
+        width: calc(100% - 120px);
+        padding: 40px 60px 40px 60px;
+        margin: 0;
+        
+    }
+    #numeropokemon{
+        width: 50%;
+    }
+
+}
